@@ -1,0 +1,24 @@
+lista = ["luis", "pedro", "juan"]
+print(lista)  
+
+import pandas as pd
+import numpy as np 
+import dask.dataframe as dd
+from pathlib import path
+
+url_cgsse = ''
+url_ocupados = ''
+url_ft = ''
+url_desocupados = ''
+
+#CGSSE
+df_cgsse = pd.read_csv(url_cgsse, encoding='latin-1', sep =';', low_memory= False)
+
+#Ocupados
+df_ocupados=pd.read_csv(url_ocupados,encoding='latin-1', sep=';',low_memory=False)
+
+#Fuerza de trabajo
+df_ft=pd.read_csv(url_ft,encoding='latin-1',sep=';',low_memory=False)
+
+#No ocupados
+df_desocupados=pd.read_csv(url_desocupados,encoding='latin-1', sep=';', low_memory=False)
