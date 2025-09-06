@@ -1,15 +1,10 @@
-lista = ["luis", "pedro", "juan"]
-print(lista)  
-
 import pandas as pd
-import numpy as np 
-import dask.dataframe as dd
-from pathlib import path
+import numpy as np
 
-url_cgsse = ''
-url_ocupados = ''
-url_ft = ''
-url_desocupados = ''
+url_cgsse = 'https://github.com/niconomist98/DataAnalyticsUQ/raw/refs/heads/main/Datos/GEIH2025/cgsse.CSV'
+url_ocupados = 'https://github.com/niconomist98/DataAnalyticsUQ/raw/refs/heads/main/Datos/GEIH2025/Ocupados.CSV'
+url_ft = 'https://github.com/niconomist98/DataAnalyticsUQ/raw/refs/heads/main/Datos/GEIH2025/Fuerza%20de%20trabajo.CSV'
+url_desocupados = 'https://github.com/niconomist98/DataAnalyticsUQ/raw/refs/heads/main/Datos/GEIH2025/No%20ocupados.CSV'
 
 #CGSSE
 df_cgsse = pd.read_csv(url_cgsse, encoding='latin-1', sep =';', low_memory= False)
@@ -22,3 +17,10 @@ df_ft=pd.read_csv(url_ft,encoding='latin-1',sep=';',low_memory=False)
 
 #No ocupados
 df_desocupados=pd.read_csv(url_desocupados,encoding='latin-1', sep=';', low_memory=False)
+
+
+
+
+
+n = 2
+print(n)
